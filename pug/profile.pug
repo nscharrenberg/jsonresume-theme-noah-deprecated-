@@ -1,0 +1,64 @@
+mixin render_profiles(profiles)
+    ul(class="social")
+        each profile in profiles
+            li(class=profile.network)
+                a(
+                    href=profile.url,
+                    target="_blank",
+                    title= resume.basics.name + " on " + profile.network,
+                    )
+                    i(class='fab fa-'+profile.network)
+
+
+section.resume-header.bg-icon-plane
+    .container
+        .row
+            .col-lg-8.mx-md-auto
+                h1(itemprop="name")=resume.basics.name
+
+                p(
+                    class="subtitle"
+                    itemprop="jobTitle"
+                    )=resume.basics.label
+
+                img(
+                    class="user_profile"
+                    src=resume.basics.picture,
+                    alt=resume.basics.name,
+                    itemprop="image")
+
+                +render_profiles(resume.basics.top_five_profiles)
+
+section.contactBar
+    .container
+        .row.contacts
+            if resume.basics.website
+                .col-md
+                    span
+                        i(class="fas fa-link contactIcon")
+
+                    p
+                        a(href=resume.basics.website)=resume.basics.website
+
+            if resume.basics.email
+                .col-md.light
+                    span
+                        i(class="far fa-envelope-open contactIcon")
+
+                    p
+                        a(href='mailto:'+resume.basics.email)=resume.basics.email
+
+            if resume.basics.phone
+                .col-md.light
+                    span
+                        i(class="fas fa-phone contactIcon")
+
+                    p
+                        a(href='tel:' + resume.basics.phone)=resume.basics.phone
+
+            if resume.basics.computed_location
+                .col-md
+                    span
+                        i(class="fas fa-map-marker-alt contactIcon")
+
+                    p=resume.basics.computed_location
