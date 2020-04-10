@@ -11566,7 +11566,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .user_profile {
-  width: 150px;
+  width: 200px;
   border: 1px solid #eee;
   background: #fff;
   padding: 5px;
@@ -19070,7 +19070,6 @@ ul.arrow-list li::before {
 
 .resume2 .resume-header {
   padding: 78px 0;
-  text-align: left;
 }
 
 .home-slider {

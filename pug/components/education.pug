@@ -1,0 +1,19 @@
+unless  _.isEmpty(resume.education)
+    section.education
+        .container
+            header.section-heading.p-t-40
+                h2 Education
+
+            .container
+                .paper-timeline
+                    .start-icon
+                        i.fas.fa-graduation-cap
+
+                    .row
+                        each study, index in resume.education
+                            div(class="col-sm-12 col-md-6 timeline-item " + (index % 2 ? 'offset-md-6 right' : 'left'))
+                                .row
+                                    .col-md-11
+                                        .timeline-panel
+                                            h3(itemprop="educationTitle")!=study.studyType
+

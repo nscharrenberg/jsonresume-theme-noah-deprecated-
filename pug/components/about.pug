@@ -1,0 +1,7 @@
+unless  _.isEmpty(resume.basics.summary)
+    section.about-me
+        .container
+            header.section-heading.p-t-40
+                h2 About
+                p(itemprop="description")!=resume.basics.summary
+
