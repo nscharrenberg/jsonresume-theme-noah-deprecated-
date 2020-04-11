@@ -98,6 +98,7 @@ module.exports = function(grunt) {
         // 'copy:favicon'
     ]);
     grunt.registerTask('serve', [
+        'exec:compile_pug',
         'exec:run_server'
     ]);
     grunt.registerTask('compile:pug', ['exec:compile_pug']);
