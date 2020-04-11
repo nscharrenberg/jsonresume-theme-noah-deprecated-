@@ -15,5 +15,22 @@ unless  _.isEmpty(resume.education)
                                 .row
                                     .col-md-11
                                         .timeline-panel
-                                            h3(itemprop="educationTitle")!=study.studyType
+                                            .media
+                                                unless _.isEmpty(study.image)
+                                                    img.d-flex.mr-3.height-50(
+                                                        src=study.image,
+                                                        alt=study.institution,
+                                                        itemprop="image"
+                                                        )
+                                                .media-body
+                                                    h3.mt-0.mb-1(itemprop="institute")!=study.institution
+                                                    p.mb-0.mt-0.lh-15
+                                                        |#{study.area ? study.area + ', ' : ''} #{study.studyType}
+                                                    p.mb-1.mt-0.lh-15
+                                                        |#{study.startDate} - #{study.endDate || 'Present'}
+                                                    unless _.isEmpty(study.courses)
+                                                        each course in study.courses
+                                                            span.badge.badge-primary.mr-1.mb-1
+                                                                | #{course}
+
 

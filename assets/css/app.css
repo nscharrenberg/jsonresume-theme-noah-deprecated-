@@ -6176,6 +6176,32 @@ a.bg-dark:focus, a.bg-dark:hover {
   clip-path: none;
 }
 
+.lh-0 {
+  line-height: 0;
+}
+
+.lh-05 {
+  line-height: 0.5;
+}
+
+.lh-10 {
+  line-height: 1.0;
+}
+
+.lh-15 {
+  line-height: 1.5;
+}
+
+.lh-20 {
+  line-height: 2.0;
+}
+
+.lh-25 {
+  line-height: 2.5;
+}
+
+
+
 .w-25 {
   width: 25% !important;
 }
@@ -19826,6 +19852,7 @@ slider
   background-color: #f5f8fa;
   left: 50%;
   margin-left: -1.5px;
+  z-index: -1;
 }
 
 .paper-timeline .clearFix {
@@ -19838,9 +19865,11 @@ slider
   padding-bottom: 80px;
 }
 
-.paper-timeline .start-icon img {
+.paper-timeline .start-icon svg {
   display: block;
   margin: 0 auto;
+  color: #dfe7ed;
+  font-size: 64px;
 }
 
 .paper-timeline .timeline-item h3 {
@@ -19922,7 +19951,7 @@ slider
 }
 
 .contactIcon {
-  color: rgba(134, 147, 158, .25);
+  color: #dfe7ed;
   font-size: 64px;
   margin-top: 25px;
   margin-bottom: 25px;

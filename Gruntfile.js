@@ -29,12 +29,13 @@ module.exports = function(grunt) {
                 }
             },
             pug: {
-                files: ['index.pug'],
+                files: ['index.pug', 'pug/*.pug', 'pug/components/*.pug'],
                 tasks: ['exec:compile_pug'],
                 options: {
-                    nospawn: true
+                    nospawn: true,
+                    livereload: true,
                 }
-            }
+            },
         },
         exec: {
             run_server: {
@@ -97,7 +98,6 @@ module.exports = function(grunt) {
         // 'copy:favicon'
     ]);
     grunt.registerTask('serve', [
-        'build',
         'exec:run_server'
     ]);
     grunt.registerTask('compile:pug', ['exec:compile_pug']);
