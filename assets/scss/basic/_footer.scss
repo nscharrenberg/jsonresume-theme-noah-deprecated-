@@ -72,21 +72,3 @@ footer {
     font-weight: 300;
   }
 }
-
-ul.arrow-list {
-  padding: 0;
-  li {
-    padding-left: 20px;
-    margin-bottom: 10px;
-    position: relative;
-    &::before {
-      content: "";
-      display: block;
-      font-family: paperIcons;
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      left: 0;
-    }
-  }
-}
