@@ -1,0 +1,39 @@
+footer.mt-0
+    .container
+        .row
+            .col-2.responsive-phone
+                img(
+                    class="user_profile m-t-b-10"
+                    src=resume.basics.picture,
+                    alt=resume.basics.name,
+                    itemprop="image")
+
+            .col-6.text-left
+                header.section-heading.p-t-40.text-left
+                    h2=resume.basics.name
+                    p(itemprop="description")!=resume.basics.label
+
+            .col-4.responsive-phone
+                .footer-links.mb-2
+                    li
+                        i(class="fas fa-link")
+                        a(href=resume.basics.website)
+                            |  #{resume.basics.website}
+
+                    li
+                        i(class="far fa-envelope-open")
+                        a(href='mailto:'+resume.basics.email)
+                            |  #{resume.basics.email}
+
+                    li
+                        i(class="fas fa-phone")
+                        a(href='tel:' + resume.basics.phone)
+                            |  #{resume.basics.phone}
+
+                    li
+                        i(class="fas fa-map-marker-alt")
+                        |  #{resume.basics.computed_location}
+                .copyrights
+                    p
+                        | &copy; #{new Date().getFullYear()} #{resume.basics.name}
+
