@@ -105,9 +105,6 @@ function render(resume) {
         }
 
         work_info.summary = convertMarkdown(work_info.summary);
-
-        work_info.highlights = _(work_info.highlights)
-            .map(highlight => convertMarkdown(highlight));
     });
 
     _(resume.projects).sort((a, b) => sort(a, b, 'endDate', true, '<', 'startDate', true));

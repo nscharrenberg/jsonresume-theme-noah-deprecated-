@@ -35,6 +35,10 @@ unless  _.isEmpty(resume.education)
                                                                 i.icon-clock.mr-5
                                                                 |#{item.duration}
                                                     p!=item.summary
+                                                    unless _.isEmpty(item.highlights)
+                                                        each highlight in item.highlights
+                                                            span.badge.badge-primary.mr-1.mb-1
+                                                                | #{highlight}
 
                 .end-icon
                     i.fas.fa-circle
