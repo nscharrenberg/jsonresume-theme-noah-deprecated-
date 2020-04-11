@@ -4052,8 +4052,9 @@ tbody.collapse.show {
 }
 
 .badge-light {
-  color: #111;
-  background-color: #f8f9fa;
+  color: #86939e;
+  background-color: #f5f8fa;
+  border-bottom: 1px solid #e1e8ee;
 }
 
 .badge-light[href]:focus, .badge-light[href]:hover {
@@ -12059,7 +12060,7 @@ code {
 }
 
 .v_tabs .tabs-left {
-  border-right: 3px solid #f5f8fa;
+  border-right: 0px solid #f5f8fa;
   padding-right: 70px;
 }
 
@@ -18338,7 +18339,7 @@ ul.arrow-list li::before {
   padding-left: 30px;
 }
 
-.topics h3 a {
+.topics .topic-header {
   font-size: 18px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
@@ -18382,8 +18383,6 @@ ul.arrow-list li::before {
 }
 
 .topics-wrapper .topics-list li:before {
-
-  content: "\e992";
   color: #b5bfc7;
   font-size: 18px;
 }
@@ -19866,7 +19865,7 @@ slider
   padding-bottom: 80px;
 }
 
-.paper-timeline .start-icon svg {
+.start-icon svg {
   display: block;
   margin: 0 auto;
   margin-bottom: 0px;

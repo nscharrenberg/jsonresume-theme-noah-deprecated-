@@ -1,0 +1,23 @@
+unless  _.isEmpty(resume.skills)
+    section(
+        id="skills"
+        class="has-overlay light p-t-b-50 mt-5"
+        )
+        .container
+            .col-lg-10.mx-md-auto
+                .text-center
+                    h3 Skills
+
+                .row.topics
+                    each item in resume.skills
+                        .col-4
+                            .topics-wrapper.border-style.text-center
+                                h3.topic-header
+                                        | #{item.name}
+
+                                unless _.isEmpty(item.keywords)
+                                    div.topics-list
+                                        each i in item.keywords
+                                            span.badge.badge-primary.mr-1.mb-1
+                                                | #{i}
+
