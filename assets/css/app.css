@@ -10497,24 +10497,6 @@ footer .copyrights {
   font-weight: 300;
 }
 
-ul.arrow-list {
-  padding: 0;
-}
-ul.arrow-list li {
-  padding-left: 20px;
-  margin-bottom: 10px;
-  position: relative;
-}
-ul.arrow-list li::before {
-  content: "";
-  display: block;
-  font-family: paperIcons;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  left: 0;
-}
-
 .user_profile {
   width: 200px;
   border: 1px solid #eee;
@@ -10790,6 +10772,9 @@ ul.arrow-list li::before {
   border-radius: 5px;
   background: #fff;
   text-align: center;
+}
+.contactBar .contacts a {
+  color: #86939e;
 }
 .contactBar .icon {
   padding: 30px;
