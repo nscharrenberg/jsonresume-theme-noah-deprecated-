@@ -1,0 +1,44 @@
+unless  _.isEmpty(resume.volunteer)
+    section#work
+        .container
+            header.section-heading.p-t-40
+                h2 Volunteer Work
+            .container
+                .paper-timeline
+                    .start-icon
+                        i.fas.fa-child
+
+                    .row
+                        each item, index in resume.volunteer
+                            div(class="col-sm-12 col-md-6 timeline-item " + (index % 2 ? 'offset-md-6 right' : 'left'))
+                                .row
+                                    .col-md-11
+                                        .timeline-panel
+                                            .media
+                                                unless _.isEmpty(item.image)
+                                                    img.d-flex.mr-3.height-50(
+                                                        src=item.image,
+                                                        alt=item.organization,
+                                                        itemprop="image"
+                                                    )
+                                                .media-body
+                                                    h3.mt-0.mb-1(itemprop="position")!=item.position
+                                                    p.mb-0.mt-0.lh-15
+                                                        if item.website
+                                                            a(href=item.website, target="_blank")= item.organization
+                                                        else
+                                                            | #{item.organization}
+                                                    p.mb-1.mt-0.lh-15
+                                                        |#{item.startDate} - #{item.endDate || 'Present'}
+                                                        if item.duration
+                                                            span
+                                                                i.icon-clock.mr-5
+                                                                |#{item.duration}
+                                                    !=item.summary
+                                                    unless _.isEmpty(item.highlights)
+                                                        each highlight in item.highlights
+                                                            span.badge.badge-primary.mr-1.mb-1
+                                                                | #{highlight}
+
+                .end-icon
+                    i.fas.fa-circle
