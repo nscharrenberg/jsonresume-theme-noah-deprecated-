@@ -1,0 +1,24 @@
+unless  _.isEmpty(resume.interests)
+    section(
+        id="skills"
+        class="service-blocks section light p-t-b-50 mt-5"
+        )
+        .container
+            .row
+                .col-6.mx-auto
+                    header
+                        h2 My Interests
+
+            .p-t-b-40
+                .row
+                    unless _.isEmpty(resume.interests)
+                        each item in resume.interests
+                            .col-4
+                                .service-block.center
+                                    unless _.isEmpty(item.icon)
+                                        .service-icon
+                                            i(class=item.icon)
+
+                                    .service-content
+                                        h3.my-3=item.name
+

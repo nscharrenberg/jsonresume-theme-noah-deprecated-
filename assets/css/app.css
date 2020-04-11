@@ -20091,12 +20091,13 @@ slider
   flex-direction: column;
 }
 
-.service-blocks .service-block:hover .service-icon i {
+.service-blocks .service-block:hover .service-icon svg {
   opacity: 0.5;
 }
 
-.service-blocks .service-block .service-icon i::before {
+.service-blocks .service-block .service-icon svg {
   font-size: 60px;
+  color: #dfe7ed;
 }
 
 .service-blocks .service-block .service-content {
