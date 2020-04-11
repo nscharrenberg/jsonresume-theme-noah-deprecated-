@@ -1,0 +1,28 @@
+/**
+ *
+ *  Command : gulp watch or gulp styles
+ *
+ */
+//Core Or Common SCSS both for front end and panel
+@import "../scss/common";
+
+/*
+ * Basic or Must have Elements
+ * You might not want to comment or delete them
+ */
+
+@import "basic/footer";
+@import "basic/_profile";
+@import "templates/topics";
+//Components
+/*
+ * Templates Specific Styles
+ */
+@import "templates/template-resume";
+
+/*
+ * Components
+ */
+@import "components/timeline";
+@import "components/contactBar";
+@import "components/services";

@@ -1,0 +1,18 @@
+//// Necessary Modules
+@import 'basic/variables';
+//// colors, fonts etc...
+@import "bootstrap/bootstrap";
+
+@import '../scss/libs/roboto';
+/*
+ * Should be at top of all other
+ */
+@import "basic/responsive-helper";
+@import 'basic/mixins';
+@import "basic/base";
+@import "all";
+@import "basic/social";
+
+//should be at end to override styles
+@import "basic/helper";
+@import "kit/colors";

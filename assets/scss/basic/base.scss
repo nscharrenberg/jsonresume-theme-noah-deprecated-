@@ -1,0 +1,206 @@
+//
+// Base
+// --------------------------------------------------
+
+body {
+  color: $default-text-color;
+  font-family: $primary-font;
+  font-size: 14px;
+  height: 100%;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  padding-right: 0 !important;
+  //overflow: hidden;
+}
+
+a {
+  color: $brand-primary;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    color: #03a9f4;
+  }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-heading-color;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+.h5 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  li {
+    list-style: none;
+    font-weight: 300;
+    i {
+      padding-right: 15px;
+    }
+  }
+}
+
+header {
+  h2 {
+    line-height: 60px;
+  }
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+.section {
+  padding: 50px 0;
+  header {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.section-title {
+
+  font-weight: 300;
+  color: #43484d;
+  @include desktop {
+    font-size: 52px;
+  }
+}
+
+.section-subtitle {
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 32px;
+  color: #5e6977;
+  width: 55%;
+  margin: 20px auto 40px;
+}
+
+.page {
+  .search-section, .page-header {
+    padding: 30px;
+    h1 {
+      font-size: 28px;
+      small {
+        background: $brand-primary;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 3px 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+#page_wrap {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+
+.offcanvas #page_wrap {
+  overflow: hidden;
+  position: absolute;
+}
+
+.offcanvas #page_wrap::after {
+  background: rgba(245, 248, 250, 0.7) none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 2s ease 0s;
+  z-index: 101;
+}
+
+@include desktop {
+  .enable-offcanvas {
+    .paper-nav-toggle,
+    #paper-offcanvas {
+      display: block;
+    }
+  }
+}
+
+.block {
+  font-size: 14px;
+  img {
+    border-radius: 3px;
+    margin: 15px 0 20px;
+    max-width: 100%;
+  }
+}
+
+.service-sidebar.sidebar-wrapper {
+  background-color: #f9f9fb;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  padding: 20px;
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 36px;
+    padding-bottom: 0;
+    text-transform: capitalize;
+  }
+}
+
+.paper-block {
+  padding: 15px;
+  border: 3px solid $color-5;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+@include lg-desktop {
+  .inside {
+    margin: 0 auto;
+    background: #fff;
+    width: 80%;
+  }
+}
+.card-header{
+  position: relative;
+  .card-handle{
+    position: absolute;
+    right: 20px;
+  }
+}
+.content-wrapper {
+  padding: 40px 0;
+}

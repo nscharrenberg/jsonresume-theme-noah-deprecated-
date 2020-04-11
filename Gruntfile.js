@@ -10,20 +10,20 @@ module.exports = function(grunt) {
                 }
             }
         },
-        less: {
-            development: {
+        sass: {
+            dist: {
                 options: {
-                    paths: ["assets"]
+                    style: 'expanded'
                 },
                 files: {
-                    "assets/css/theme.css": "assets/less/theme.less"
+                    "assets/css/app.css": "assets/scss/app.scss"
                 }
             }
         },
         watch: {
             styles: {
-                files: ['assets/less/**/*.less'],
-                tasks: ['less'],
+                files: ['assets/scss/**/*.scss'],
+                tasks: ['sass'],
                 options: {
                     nospawn: true
                 }
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-clean')
@@ -98,6 +98,7 @@ module.exports = function(grunt) {
         // 'copy:favicon'
     ]);
     grunt.registerTask('serve', [
+        'sass',
         'exec:compile_pug',
         'exec:run_server'
     ]);
