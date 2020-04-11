@@ -19875,6 +19875,15 @@ slider
   background-color: #fff;
 }
 
+.end-icon svg {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  color: #f5f8fa;
+  font-size: 15px;
+  background-color: #fff;
+}
+
 .paper-timeline .timeline-item h3 {
   font-size: 18px;
   font-weight: 400;
