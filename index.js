@@ -11,6 +11,56 @@ const { renderResume } = require('./tpl/index');
 
 utils.setConfig({ date_format: 'MMM, YYYY' });
 
+function sort(a, b, key, date1 = false, direction = '<', alternativeKey = undefined, date2 = false) {
+    let result = 0;
+
+    if(date1) {
+        if(a[key] !== undefined) {
+            a[key] = moment(a[key], 'YYYY-MM-DD');
+        }
+
+        if(b[key] !== undefined) {
+            b[key] = moment(b[key], 'YYYY-MM-DD');
+        }
+    }
+
+    if(alternativeKey === undefined) {
+        if(a[key] === undefined) {
+            result = -1;
+        } else if (b[key] === undefined) {
+            result = 1;
+        } else {
+            if(eval(a[key] + direction + b[key])) {
+                result = 1;
+            } else if(eval(b[key] + direction + a[key])) {
+                result = -1;
+            } else {
+                result = 0;
+            }
+        }
+    } else {
+        if(a[key] === undefined && b[key] === undefined) {
+            result = sort(a, b, alternativeKey, date2);
+        } else if(a[key] === undefined) {
+            result = -1;
+        } else if (b[key] === undefined) {
+            result = 1;
+        } else {
+            if(eval(a[key] + direction + b[key])) {
+                result = 1;
+            } else if(eval(b[key] + direction + a[key])) {
+                result = -1;
+            } else if (a[key] === b[key]) {
+                result = sort(a, b, alternativeKey, date2);
+            } else {
+                result = 0;
+            }
+        }
+    }
+
+    return result;
+}
+
 function render(resume) {
     const addressAttrs = ['address', 'city', 'region', 'countryCode', 'postalCode'];
     const addressValues = addressAttrs.map(key => resume.basics.location[key]);
@@ -35,13 +85,15 @@ function render(resume) {
     resume.basics.top_five_profiles = resume.basics.profiles.slice(0, 5);
     resume.basics.remaining_profiles = resume.basics.profiles.slice(5);
 
+    _(resume.work).sort((a, b) => sort(a, b, 'endDate', true, '<', 'startDate', true));
+
     _(resume.work).forEach(work_info => {
         const start_date = moment(work_info.startDate, 'YYYY-MM-DD');
         const end_date = moment(work_info.endDate, 'YYYY-MM-DD');
         const can_calculate_period = start_date.isValid() && end_date.isValid();
 
         if (can_calculate_period) {
-            work_info.duration = moment.duration(start_date.diff(end_date));
+            work_info.duration = moment.duration(start_date.diff(end_date)).humanize();
         }
 
         if (start_date.isValid()) {
@@ -58,13 +110,15 @@ function render(resume) {
             .map(highlight => convertMarkdown(highlight));
     });
 
+    _(resume.projects).sort((a, b) => sort(a, b, 'endDate', true, '<', 'startDate', true));
+
     _(resume.projects).forEach(work_info => {
         const start_date = moment(work_info.startDate, 'YYYY-MM-DD');
         const end_date = moment(work_info.endDate, 'YYYY-MM-DD');
         const can_calculate_period = start_date.isValid() && end_date.isValid();
 
         if (can_calculate_period) {
-            work_info.duration = moment.duration(start_date.diff(end_date));
+            work_info.duration = moment.duration(start_date.diff(end_date)).humanize();
         }
 
         if (start_date.isValid()) {
@@ -90,6 +144,8 @@ function render(resume) {
             skill_info.display_progress_bar = _.contains(levels, skill_info.level);
         }
     });
+
+    _(resume.education).sort((a, b) => sort(a, b, 'endDate', true, '<', 'startDate', true));
 
     _(resume.education).forEach(education_info => {
         ['startDate', 'endDate'].forEach(type => {
