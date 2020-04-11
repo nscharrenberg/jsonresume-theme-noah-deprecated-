@@ -11508,7 +11508,8 @@ input[type="checkbox"], input[type="radio"] {
 
 .social {
   list-style: none;
-  padding: 35px 0;
+  padding-bottom: 35px;
+  padding-top: 15px;
 }
 
 .social li {
@@ -19868,8 +19869,10 @@ slider
 .paper-timeline .start-icon svg {
   display: block;
   margin: 0 auto;
+  margin-bottom: 0px;
   color: #dfe7ed;
   font-size: 64px;
+  background-color: #fff;
 }
 
 .paper-timeline .timeline-item h3 {
