@@ -21,11 +21,12 @@ section.resume-header.bg-icon-plane
                     itemprop="jobTitle"
                     )=resume.basics.label
 
-                img(
-                    class="user_profile"
-                    src=resume.basics.picture,
-                    alt=resume.basics.name,
-                    itemprop="image")
+                unless _.isEmpty(resume.basics.picture)
+                    img(
+                        class="user_profile"
+                        src=resume.basics.picture,
+                        alt=resume.basics.name,
+                        itemprop="image")
 
                 +render_profiles(resume.basics.top_five_profiles)
 

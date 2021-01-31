@@ -1,0 +1,179 @@
+{
+   "basics":{
+      "name":"Noah Scharrenberg",
+      "label":"Software Engineer",
+      "picture":"https://www.arion.run/wp-content/uploads/2020/02/noah-ddw.png",
+      "email":"nscharrenberg@hotmail.com",
+      "phone":"(+31)6 39662622",
+      "website":"https://nscharrenberg.nl",
+      "location":{
+         "address":"Kruidenlaan 148",
+         "postalCode":"5803BH",
+         "city":"Venray",
+         "countryCode":"NL",
+         "region":"Limburg"
+      },
+      "profiles":[
+         {
+            "network":"linkedin",
+            "username":"nscharrenberg",
+            "url":"https://www.linkedin.com/in/nscharrenberg/"
+         },
+         {
+            "network":"github",
+            "username":"nscharrenberg",
+            "url":"https://github.com/nscharrenberg"
+         }
+      ]
+   },
+   "work":[
+      {
+         "company":"Student aan huis",
+         "position":"IT Support",
+         "image": "http://www.pcdokterharderwijk.nl/images/studentaanhuis.jpg",
+         "website":"https://www.studentaanhuis.nl/",
+         "startDate":"2016-08-01",
+         "endDate":"2018-08-31",
+         "summary":"Solving and teaching IT related problems at location for customers from diffirent target groups."
+      },
+      {
+         "company":"Bearingpoint Caribbean",
+         "position":"Blockchain Intern",
+         "website":"https://www.bearingpointcaribbean.com/en/",
+         "startDate":"2018-08-01",
+         "endDate":"2019-01-31",
+         "summary":"Performing research on the possibilities of Blockchain within the companies portfolio, providing an advisory report regarding and a basic prototype with Blockchain integration on an existing system."
+      },
+      {
+         "company":"ATO-Gear",
+         "position":"Intern",
+         "image": "https://www.arion.run/wp-content/uploads/2018/03/ARION-logo-standard-1-e1519987729333.png",
+         "website":"https://www.arion.run/",
+         "startDate":"2020-01-01",
+         "summary":"Researching the implementation of a conversational AI within the Arion app, to avoid users from touching their phone during running."
+      }
+   ],
+   "projects":[
+      {
+         "title":"HoJo",
+         "client":"Oulu University & Fontys University",
+         "startDate":"2018-2-01",
+         "endDate":"2018-6-01",
+         "summary":"International Project with students from Oulu University, where a tinder-like sport app was designed and created using Spring, Angular4 and VueJS."
+      },
+      {
+         "title":"Blockchain & Open Badges",
+         "client":"Fontys University & Surf",
+         "startDate":"2018-12-01",
+         "endDate":"2018-6-01",
+         "summary":"Performing research and development on a proof of concept for the use of blockchain with Open Badges for the decentralization of educational archievements, using React and Hyperledger Farbic with Composer."
+      },
+      {
+         "title":"Frightened Flowers - Glow Eindhoven 2019",
+         "client":"Glow & Fontys University",
+         "startDate":"2019-9-01",
+         "endDate":"2019-11-01",
+         "summary":"Using UX, Hardware and Software for the creation of a unique lightshow for Glow 2019. Working with fairly unfamiliar technologies within a very short timespan and strict deadline(s)."
+      }
+   ],
+   "volunteer":[
+      {
+         "organization":"Stichting DOG",
+         "position":"Volunteer",
+         "website":"https://stichtingdog.org/",
+         "startDate":"2018-09-01",
+         "endDate":"2019-01-22",
+         "summary":"Helping with the maintenance of the terrain and caretaking of the dogs."
+      }
+   ],
+   "education":[
+      {
+         "institution":"Fontys University of Applied Sciences",
+         "image": "http://resume.nscharrenberg.nl/assets/img/education/fontys.jpg",
+         "area":"Software Engineering",
+         "studyType":"Bachelor of Science",
+         "startDate":"2016-08-01"
+      }
+   ],
+   "skills":[
+      {
+         "name":"Web Development",
+         "level":"Advanced",
+         "keywords":[
+            "HTML",
+            "CSS",
+            "Javascript",
+            "Vue",
+            "Angular",
+            "React"
+         ]
+      },
+      {
+         "name":"Mobile Development",
+         "level":"Beginner",
+         "keywords":[
+            "React-Native"
+         ]
+      },
+      {
+         "name":"Java",
+         "level":"Advanced",
+         "keywords":[
+            "Java EE",
+            "Sprint"
+         ]
+      },
+      {
+         "name":"Blockchain",
+         "level":"Advanced"
+      },
+      {
+         "name":"C#",
+         "level":"Average",
+         "keywords":[
+            "ASP.NET",
+            ".NET Core"
+         ]
+      },
+      {
+         "name":"Artificial Intelligence",
+         "level":"Beginner"
+      }
+   ],
+   "languages":[
+      {
+         "language":"Dutch",
+         "fluency":"Native speaker"
+      },
+      {
+         "language":"English",
+         "fluency":"Good"
+      },
+      {
+         "language":"Deutsch",
+         "fluency":"Basic"
+      }
+   ],
+   "interests":[
+      {
+         "name":"New or Interesting Technologies",
+         "icon": "fas fa-microchip",
+         "keywords":[
+            "Artificial Intelligence",
+            "Blockchain"
+         ]
+      },
+      {
+         "name":"Movies & Series",
+         "icon": "fas fa-film"
+      },
+      {
+         "name":"Music",
+         "icon": "fas fa-music"
+      },
+      {
+         "name":"Traveling",
+         "icon" : "far fa-compass"
+      }
+   ]
+}
