@@ -21,7 +21,7 @@
   "homepage": "https://github.com/nscharrenberg/jsonresume-theme-noah#readme",
   "dependencies": {
     "gravatar": "^1.8.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "jsonresume-themeutils": "^1.4.3",
     "markdown-it": "^10.0.0",
     "markdown-it-abbr": "^1.0.4",
