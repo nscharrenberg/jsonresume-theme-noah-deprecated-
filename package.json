@@ -23,7 +23,7 @@
     "gravatar": "^1.8.0",
     "handlebars": "^4.7.6",
     "jsonresume-themeutils": "^1.4.3",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-abbr": "^1.0.4",
     "moment": "^2.24.0",
     "pug": "^2.0.4",
